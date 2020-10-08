@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
     def index
-        @posts = Post.page(params[:page]).per(7)
+        @posts = Post.page(params[:page]).per(5)
     end
 
     def write
