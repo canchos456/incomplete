@@ -1,0 +1,24 @@
+.page {
+    text-align: center;
+    width: 50%;
+}
+
+.pageination {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+    
+}
+
+.pageination li {
+    display: inline-block;
+    text-align: center;
+}
+
+.pageination a {
+    float: left;
+    display: block;
+    color: #9966aa;
+    font-size: 20px;
+}
+

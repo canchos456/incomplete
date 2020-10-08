@@ -1,0 +1,28 @@
+<%= stylesheet_link_tag "main" %>
+
+<table>
+<tr>
+    <td>제목</td>
+    <td>주소</td>
+
+</tr>
+<% @posts.each do |post| %>
+<tr>
+<td><%=post.title%></td>
+<td><%=post.content %></td>
+</tr>
+<% end %>
+</table>
+<div class = 'page'>
+    <ul class = 'pageination'>
+        <li> <a href='#' class='first'>1</a></li> 
+        <li> <a href='#' class='num2'>2</a></li> 
+        <li> <a href='#' class='num3'>3</a></li> 
+        <li> <a href='#' class='num4'>4</a></li> 
+        <li> <a href='#' class='num5'>5</a></li> 
+    
+    </ul>
+
+</div>
+<br>
+<a href='/write'>주소쓰러가기</a>
