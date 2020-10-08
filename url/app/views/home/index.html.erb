@@ -1,28 +1,22 @@
 <%= stylesheet_link_tag "main" %>
-
-<table>
+<table border = 1 width = 200 class ='table'>
 <tr>
     <td>제목</td>
     <td>주소</td>
+    <td>삭제</td>
 
 </tr>
 <% @posts.each do |post| %>
 <tr>
-<td><%=post.title%></td>
-<td><%=post.content %></td>
+    <td><%=post.title%></td>
+    <td><%=post.content %></td>
+    <td><a href="/del/<%=post.id%>">Delete</a></td> 
+
+    
 </tr>
 <% end %>
 </table>
-<div class = 'page'>
-    <ul class = 'pageination'>
-        <li> <a href='#' class='first'>1</a></li> 
-        <li> <a href='#' class='num2'>2</a></li> 
-        <li> <a href='#' class='num3'>3</a></li> 
-        <li> <a href='#' class='num4'>4</a></li> 
-        <li> <a href='#' class='num5'>5</a></li> 
-    
-    </ul>
 
-</div>
+<%= paginate @posts%>
 <br>
 <a href='/write'>주소쓰러가기</a>

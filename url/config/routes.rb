@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   get '/index' => 'home#index'
   get '/write' => 'home#write'
   post '/create' => 'home#create'
+  get '/del/:post_id' => 'home#del'
 end
