@@ -1,8 +1,11 @@
+
+<h1>단축 url</h1>
 <%= stylesheet_link_tag "main" %>
 <table border = 1 width = 200 class ='table'>
 <tr>
     <td>제목</td>
     <td>주소</td>
+    <td>긴 주소</td>
     <td>삭제</td>
 
 </tr>
@@ -10,8 +13,8 @@
 <tr>
     <td><%=post.title%></td>
     <td><%=post.content %></td>
+    <td><%=post.content3 %></td>
     <td><a href="/del/<%=post.id%>">Delete</a></td> 
-
     
 </tr>
 <% end %>
@@ -19,4 +22,5 @@
 
 <%= paginate @posts%>
 <br>
-<a href='/write'>주소쓰러가기</a>
+<a href='/write'>주소쓰러가기</a><br>
+<a href='/write2'> 긴주소</a>

@@ -1,5 +1,11 @@
 <form action='/create' method='post'>
-    url 입력: <input type="text" name="title"/> <br> 
-    url 입력: <input type="text" name="content"/> 
+    제목 입력: <input type="text" name="title"/> <br> 
+    긴 url 입력: <input type="text" name="content"/> <br>
     <input type="submit">
 </form>
+
+<%=form_tag('/home/create', method="post") do%>
+    제목 입력: <%=text_field_tag 'title',nil %><br>
+    주소 입력: <%text_area_tag 'content',nil %><br>
+    <%=submit_tag '작성'%> 
+<%end%>

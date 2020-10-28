@@ -4,4 +4,8 @@ Rails.application.routes.draw do
   get '/write' => 'home#write'
   post '/create' => 'home#create'
   get '/del/:post_id' => 'home#del'
+  get '/write2' => 'home#write2'
+  post '/create2' => 'home#create2'
+  get '/:id' => "shortener/shortened_urls#show"
+
 end
